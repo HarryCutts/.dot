@@ -1,0 +1,43 @@
+set nobackup
+
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
+"set softtabstop=4 " makes the spaces feel like real tabs
+
+autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
+
+set incsearch
+set ruler
+
+set autoindent
+set nowrap
+
+set number
+
+set scrolloff=5
+
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+"" Dvorak remappings
+" d -> move left, D -> screen top, x -> delete
+noremap d h
+noremap D H
+noremap x d
+noremap X D
+
+" h -> move down (with wrapping), H -> join lines
+noremap h gj
+noremap H J
+
+" t -> move down (with wrapping)
+noremap t gk
+
+" n -> move right, N -> screen bottom
+noremap n l
+noremap N L
+noremap j n
+noremap J N
