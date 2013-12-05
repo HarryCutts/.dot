@@ -8,7 +8,6 @@ set nobackup
 autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
 
-set incsearch
 set ruler
 
 set autoindent
@@ -22,7 +21,12 @@ set scrolloff=5
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-"" Dvorak remappings
+"* Searching *"
+set incsearch
+set ignorecase
+set smartcase
+
+"* Dvorak remappings *"
 " d -> move left, D -> screen top, x -> delete
 noremap d h
 noremap D H
