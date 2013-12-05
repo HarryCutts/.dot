@@ -1,0 +1,25 @@
+"3.5 (created: 2012/08/04 00:41:20)
+
+source! /home/harry/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+
+"" Dvorak remappings
+" d -> move left, D -> screen top, x -> delete
+noremap d h
+noremap D H
+noremap x d
+"noremap X D
+
+" h -> move down (with wrapping), H -> join lines
+noremap h j
+noremap H J
+
+" t -> move down (with wrapping)
+noremap t k
+
+" n -> move right, N -> screen bottom
+noremap n l
+noremap N L
+noremap j n
+noremap J N
