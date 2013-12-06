@@ -17,9 +17,14 @@ set number
 
 set scrolloff=5
 
+"* Highlighting *"
+
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" enable GLSL highlighting (http://vim.org/scripts/script.php?script_id=1002)
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
 
 "* Searching *"
 set incsearch
