@@ -1,0 +1,24 @@
+ZSH=$HOME/.dot/submodules/oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+
+CASE_SENSITIVE="true"           # use case-sensitive completion
+
+#DISABLE_AUTO_UPDATE="true"     # disable weekly auto-update checks
+#DISABLE_LS_COLORS="true"       # disable colors in ls
+#DISABLE_AUTO_TITLE="true"      # disable autosetting terminal title
+
+COMPLETION_WAITING_DOTS="true"  # display red dots while waiting for completion
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git svn)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+source ~/.dot/common/shell-aliases
+
+# Gitignore.io function
+function gitignore() { curl http://gitignore.io/api/$@ ;}

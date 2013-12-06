@@ -1,0 +1,9 @@
+alias ss="svn status"
+alias sa="svn add"
+alias sc="svn commit"
+
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+
+alias go="gnome-open"
