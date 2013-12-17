@@ -7,3 +7,5 @@ alias ga="git add"
 alias gc="git commit"
 
 alias go="gnome-open"
+
+alias sagi="sudo apt-get install"
