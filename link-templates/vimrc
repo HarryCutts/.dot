@@ -2,4 +2,5 @@
 " Configuration managed in the ~/.dot git repository.
 " Make changes for all machines there, but leave local ones in this file.
 "**
+let &runtimepath.=',~/.dot/files/vim'
 source ~/.dot/files/vimrc

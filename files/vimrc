@@ -1,12 +1,11 @@
 set nobackup
 
-"set tabstop=4
-"set shiftwidth=4
-"set expandtab
-"set softtabstop=4 " makes the spaces feel like real tabs
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
 
-autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
-autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
+" Load file-type specific configs from vim/ftplugin
+filetype plugin on
 
 set ruler
 
