@@ -1,20 +1,20 @@
 set nobackup
 
+set ruler
+set number
+
+set nowrap
+
+set scrolloff=5
+
+"* Indentation *"
+set autoindent
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
 " Load file-type specific configs from vim/ftplugin
 filetype plugin on
-
-set ruler
-
-set autoindent
-set nowrap
-
-set number
-
-set scrolloff=5
 
 "* Highlighting *"
 
