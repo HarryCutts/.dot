@@ -13,6 +13,13 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
+"* File Types *"
+
+" ROS launch files -> XML
+au BufNewFile,BufRead *.launch set filetype=xml
+" GLSL (http://vim.org/scripts/script.php?script_id=1002)
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
+
 " Load file-type specific configs from vim/ftplugin
 filetype plugin on
 
@@ -21,9 +28,6 @@ filetype plugin on
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-
-" enable GLSL highlighting (http://vim.org/scripts/script.php?script_id=1002)
-au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
 
 "* Searching *"
 set incsearch
