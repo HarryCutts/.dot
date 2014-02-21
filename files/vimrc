@@ -24,6 +24,7 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
 filetype plugin on
 
 "* Highlighting *"
+syntax on
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
