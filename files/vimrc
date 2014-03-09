@@ -1,3 +1,14 @@
+"* Vundle *"
+set nocompatible
+filetype off
+
+set rtp+=~/.dot/files/vim/bundle/vundle/
+call vundle#rc('~/.dot/files/vim/bundle')
+Bundle 'gmarik/vundle'
+
+"- Bundles -"
+
+"* Miscellaneous *"
 set nobackup
 
 set ruler
@@ -21,10 +32,10 @@ au BufNewFile,BufRead *.launch set filetype=xml
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
 
 " Load file-type specific configs from vim/ftplugin
-filetype plugin on
+filetype plugin indent on
 
 "* Highlighting *"
-syntax on
+syntax enable
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red

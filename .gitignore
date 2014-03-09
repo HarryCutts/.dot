@@ -1,0 +1,3 @@
+# Ignore bundles, except Vundle itself
+files/vim/bundle/**
+!files/vim/bundle/vundle
