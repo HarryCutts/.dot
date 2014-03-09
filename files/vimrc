@@ -7,6 +7,7 @@ call vundle#rc('~/.dot/files/vim/bundle')
 Bundle 'gmarik/vundle'
 
 "- Bundles -"
+Bundle 'kchmck/vim-coffee-script'
 
 "* Miscellaneous *"
 set nobackup
