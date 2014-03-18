@@ -12,6 +12,7 @@ To install in a clean home directory:
 	cd .dot/
 	chmod +x deploy.py
 	./deploy.py
+	vim +BundleInstall +qall
 
 Using for your own dotfiles
 ---------------------------
