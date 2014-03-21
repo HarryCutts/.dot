@@ -31,6 +31,8 @@ set noexpandtab
 au BufNewFile,BufRead *.launch set filetype=xml
 " GLSL (http://vim.org/scripts/script.php?script_id=1002)
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
+" *.md -> Markdown (instead of Modula-2)
+au BufNewFile,BufRead *.md set filetype=markdown
 
 " Load file-type specific configs from vim/ftplugin
 filetype plugin indent on
