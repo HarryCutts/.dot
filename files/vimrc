@@ -53,6 +53,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+"* Command completion *"
+set wildmode=longest:full
+set wildmenu
+
 "* Dvorak remappings *"
 " d -> move left, D -> screen top, x -> delete
 noremap d h
