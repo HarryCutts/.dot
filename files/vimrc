@@ -3,11 +3,13 @@ set nocompatible
 filetype off
 
 set rtp+=~/.dot/files/vim/bundle/vundle/
-call vundle#rc('~/.dot/files/vim/bundle')
-Bundle 'gmarik/vundle'
+call vundle#begin('~/.dot/files/vim/bundle')
+Plugin 'gmarik/vundle'
 
-"- Bundles -"
-Bundle 'kchmck/vim-coffee-script'
+"- Plugins -"
+Plugin 'kchmck/vim-coffee-script'
+
+call vundle#end()
 
 "* Miscellaneous *"
 set nobackup
