@@ -40,11 +40,11 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl set syntax=glsl
 " *.md -> Markdown (instead of Modula-2)
 au BufNewFile,BufRead *.md set filetype=markdown
 
+syntax on
 " Load file-type specific configs from vim/ftplugin
 filetype plugin indent on
 
 "* Highlighting *"
-syntax enable
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
