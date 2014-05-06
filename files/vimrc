@@ -8,6 +8,7 @@ Plugin 'gmarik/vundle'
 
 "- Plugins -"
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
