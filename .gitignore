@@ -1,3 +1,6 @@
 # Ignore bundles, except Vundle itself
 files/vim/bundle/**
 !files/vim/bundle/vundle
+
+# Ignore vim dictionary
+files/vim/spell/**
