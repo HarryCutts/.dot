@@ -1,0 +1,9 @@
+H forw-line 8h
+T back-line 8t
+h forw-line
+t back-line
+j repeat-search
+J reverse-search
+
+#line-edit
+\e abort

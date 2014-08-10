@@ -39,3 +39,7 @@ for file_name in link_templates:
 
     else:
         shutil.copy2(join(link_templates_path, file_name), target_path)
+
+## Special cases ##
+# lesskey
+os.system('lesskey ~/.dot/files/lesskey')
