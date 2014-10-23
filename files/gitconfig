@@ -3,3 +3,5 @@
 	excludesfile = ~/.dot/files/gitignore
 [color]
 	ui = true
+[push]
+	default = simple
