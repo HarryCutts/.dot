@@ -13,8 +13,10 @@
 #	$ mv quuz.txt $(up foo)
 #
 function up {
+	local pathParts
 	pathParts=("${(s|/|)$(pwd)}")  # split pwd by slash
-	target=""
+	local target=""
+	local part
 	for part in $pathParts; do
 		target=$target/$part
 		if [[ $part == $1 ]]; then
