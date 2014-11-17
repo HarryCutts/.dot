@@ -9,6 +9,8 @@ Plugin 'gmarik/vundle'
 "- Plugins -"
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+
 Plugin 'groenewege/vim-less'
 Plugin 'git://github.com/tomasr/molokai.git'
 
