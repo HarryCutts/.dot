@@ -22,7 +22,7 @@
 #
 function up {
 	local pathParts
-	local target="${1%/*}"  # split $1 by the first slash
+	local target="${1%%/*}"  # split $1 by the first slash
 	local tail="${1#*/}"
 	local targetPath=""
 
