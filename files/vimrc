@@ -1,3 +1,6 @@
+let g:vimfolder = '~/.dot/files/vim'
+let &runtimepath.=','.g:vimfolder
+
 "* Vundle *"
 set nocompatible
 filetype off

@@ -1,1 +1,1 @@
-runtime ftplugin/text.vim
+exec 'source '.g:vimfolder.'/ftplugin/text.vim'
