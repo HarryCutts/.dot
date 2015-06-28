@@ -9,6 +9,7 @@ Installation
 To install in a clean home directory:
 
 	git clone git@github.com:Fodaro/.dot.git
+	git submodule update --init
 	cd .dot/
 	chmod +x deploy.py
 	./deploy.py
