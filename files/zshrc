@@ -18,6 +18,7 @@ plugins=(git svn pip per-directory-history)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+source ~/.dot/common/common.sh
 source ~/.dot/common/shell-aliases
 source ~/.dot/common/up-function.zsh
 

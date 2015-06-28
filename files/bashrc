@@ -10,4 +10,5 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+source ~/.dot/common/common.sh
 source ~/.dot/common/shell-aliases
