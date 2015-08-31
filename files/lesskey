@@ -1,7 +1,7 @@
-H forw-line 8h
-T back-line 8t
-h forw-line
-t back-line
+T forw-line 8t
+N back-line 8n
+t forw-line
+n back-line
 j repeat-search
 J reverse-search
 

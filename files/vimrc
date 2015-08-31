@@ -68,21 +68,17 @@ set wildmode=longest:full
 set wildmenu
 
 "* Dvorak remappings *"
-" d -> move left, D -> screen top, x -> delete
-noremap d h
-noremap D H
-noremap x d
-noremap X D
+" (nothing to change) h -> move left, H -> screen top
 
-" h -> move down (with wrapping), H -> join lines
-noremap h gj
-noremap H J
+" t -> move down (with wrapping), T -> join lines
+noremap t gj
+noremap T J
 
-" t -> move down (with wrapping)
-noremap t gk
-
-" n -> move right, N -> screen bottom
-noremap n l
-noremap N L
+" n -> move up (with wrapping), j/J -> jump between matches
+noremap n gk
 noremap j n
 noremap J N
+
+" s -> move right, S -> screen bottom
+noremap s l
+noremap S L
