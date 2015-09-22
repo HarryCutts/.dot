@@ -1,4 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python
+
+from __future__ import print_function
+try: raw_input
+except NameError: raw_input = input
 
 import sys
 import os
@@ -20,10 +24,10 @@ for file_name in link_templates:
 
     if '.'+file_name in home:
         prompt = "There is already a file named ." + file_name + ". Replace, skip, or back up? [r/S/b] "
-        choice = input(prompt).lower()
+        choice = raw_input(prompt).lower()
         while choice not in valid_choices:
             print("Please enter either 'r', 's', or 'b', or press ENTER to skip.")
-            choice = input(prompt).lower()
+            choice = raw_input(prompt).lower()
 
         if choice == 'r':
             shutil.copy2(join(link_templates_path, file_name), target_path)
