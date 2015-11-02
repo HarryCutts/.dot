@@ -63,6 +63,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+"* Insert mode completion *"
+set completeopt=menu,preview,longest
+
 "* Command completion *"
 set wildmode=longest:full
 set wildmenu
