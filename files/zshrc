@@ -27,7 +27,8 @@ function gitignore() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # If on a remote machine, show the hostname in the prompt
 if [ "$SSH_CLIENT" ]; then
-	local colored_hostname="%(?:%{$fg_bold[green]$(hostname)%}:%{$fg_bold[red]$(hostname)%}%s)"
+	local machine_name=$(hostname -s)
+	local colored_hostname="%(?:%{$fg_bold[green]${machine_name}%}:%{$fg_bold[red]${machine_name}%}%s)"
 	export PROMPT="${colored_hostname} $PROMPT"
 fi
 
