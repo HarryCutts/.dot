@@ -25,13 +25,13 @@ source ~/.dot/common/up-function.zsh
 # Gitignore.io function
 function gitignore() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-# Show the time right-aligned at the prompt
-export RPROMPT="%F{yellow}%T%f"
-
 # If on a remote machine, show the hostname in the prompt
 if [ "$SSH_CLIENT" ]; then
 	local machine_name=$(hostname -s)
 	local colored_hostname="%(?:%{$fg_bold[green]${machine_name}%}:%{$fg_bold[red]${machine_name}%}%s)"
 	export PROMPT="${colored_hostname} $PROMPT"
+else
+	# Show the time right-aligned at the prompt (causes problems over SSH)
+	export RPROMPT="%F{yellow}%T%f"
 fi
 
