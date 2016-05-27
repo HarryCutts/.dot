@@ -16,6 +16,16 @@ let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
 
 Plugin 'groenewege/vim-less'
 Plugin 'git://github.com/tomasr/molokai.git'
+Plugin 'scrooloose/syntastic'
+" Recommended settings from Syntastic README
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 call vundle#end()
 
