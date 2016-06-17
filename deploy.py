@@ -47,3 +47,8 @@ for file_name in link_templates:
 ## Special cases ##
 # lesskey
 os.system('lesskey ~/.dot/files/lesskey')
+
+# Load the submodules and install Vim plugins
+os.chdir(join(home_path, '.dot'))
+os.system('git submodule update --init')
+os.system('vim +PluginInstall +qall')
