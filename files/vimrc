@@ -80,6 +80,9 @@ set completeopt=menu,preview,longest
 set wildmode=longest:full
 set wildmenu
 
+"* Key mappings *"
+let mapleader=" "
+
 "* Dvorak remappings *"
 " (nothing to change) h -> move left, H -> screen top
 
