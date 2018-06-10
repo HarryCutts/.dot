@@ -48,6 +48,9 @@ for file_name in link_templates:
 # lesskey
 os.system('lesskey ~/.dot/files/lesskey')
 
+# xmodmap reminder
+print("In an appropriate init file, add `xmodmap ~/.dot/files/xmodmap`.")
+
 # Load the submodules and install Vim plugins
 os.chdir(join(home_path, '.dot'))
 os.system('git submodule update --init')

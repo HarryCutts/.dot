@@ -1,0 +1,3 @@
+!To use, pass to xmodmap in ~/.xinitrc
+clear Lock
+keycode 0x42 = Escape
