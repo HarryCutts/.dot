@@ -1,12 +1,9 @@
-let g:vimfolder = '~/.dot/files/vim'
-let &runtimepath.=','.g:vimfolder
-
 "* Vundle *"
 set nocompatible
 filetype off
 
-set rtp+=~/.dot/files/vim/bundle/vundle/
-call vundle#begin('~/.dot/files/vim/bundle')
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin('~/.vim/bundle')
 Plugin 'gmarik/vundle'
 
 "- Plugins -"
