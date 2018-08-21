@@ -36,7 +36,7 @@ set nowrap
 
 set scrolloff=5
 
-set spellfile+=~/.dot/files/vim/spell/en.utf-8.add
+set spellfile+=~/.vim/spell/en.utf-8.add
 
 set tabpagemax=32
 
@@ -51,7 +51,7 @@ set noexpandtab
 
 "* File Types *"
 
-" Load file-type specific configs from vim/ftplugin
+" Load file-type specific configs from .vim/ftplugin
 filetype plugin indent on
 
 "* Highlighting *"
