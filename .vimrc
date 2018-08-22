@@ -1,3 +1,5 @@
+let g:vimfolder = '~/.vim'
+
 "* Vundle *"
 set nocompatible
 filetype off
