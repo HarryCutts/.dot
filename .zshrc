@@ -19,17 +19,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 source ~/.dot/common/common.sh
-source ~/.dot/common/shell-aliases
 source ~/.dot/common/up-function.zsh
 source ~/.dot/common/notify-function.zsh
-
-local host_specific_path_file="$HOME/.dot/host-specific-path.sh"
-if [ -e $host_specific_path_file ]; then
-	source $host_specific_path_file
-fi
-
-# Gitignore.io function
-function gitignore() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # If on a remote machine, show the hostname in the prompt
 if [ "$SSH_CLIENT" ]; then

@@ -11,4 +11,3 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 source ~/.dot/common/common.sh
-source ~/.dot/common/shell-aliases

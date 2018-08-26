@@ -1,5 +1,0 @@
-###
-# Configuration managed in the ~/.dot git repository.
-# Make changes for all machines there, but leave local ones in this file.
-###
-source ~/.dot/files/bashrc
