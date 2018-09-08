@@ -18,9 +18,9 @@ plugins=(git svn pip per-directory-history)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-source ~/.dot/common/common.sh
-source ~/.dot/common/up-function.zsh
-source ~/.dot/common/notify-function.zsh
+source ~/.dot/common.sh
+source ~/.dot/up-function.zsh
+source ~/.dot/notify-function.zsh
 
 # If on a remote machine, show the hostname in the prompt
 if [ "$SSH_CLIENT" ]; then

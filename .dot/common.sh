@@ -6,7 +6,7 @@ if [ -e $host_specific_path_file ]; then
 fi
 unset host_specific_path_file
 
-source ~/.dot/common/shell-aliases.sh
+source ~/.dot/shell-aliases.sh
 
 # Gitignore.io fetcher
 function gitignore() { curl -L -s https://www.gitignore.io/api/$@ ;}
