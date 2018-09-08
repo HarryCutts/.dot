@@ -1,0 +1,2 @@
+setxkbmap -option compose:ralt
+xmodmap ~/.dot/xmodmap
