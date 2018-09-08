@@ -1,0 +1,14 @@
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[user]
+	name = Harry Cutts
+	email = eternal.linux@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.dot/gitignore
+[push]
+	default = simple
+[merge]
+	ff = only
