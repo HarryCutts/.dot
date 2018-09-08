@@ -46,7 +46,7 @@ for file_name in link_templates:
 
 ## Special cases ##
 # lesskey
-os.system('lesskey ~/.dot/files/lesskey')
+os.system('lesskey ~/.dot/lesskey')
 
 # xmodmap reminder
 print("In an appropriate init file, add `xmodmap ~/.dot/files/xmodmap`.")
