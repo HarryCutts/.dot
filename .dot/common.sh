@@ -7,6 +7,7 @@ fi
 unset host_specific_path_file
 
 source ~/.dot/shell-aliases.sh
+source ~/.dot/notify-function.sh
 
 # Gitignore.io fetcher
 function gitignore() { curl -L -s https://www.gitignore.io/api/$@ ;}
