@@ -1,0 +1,5 @@
+#!/bin/bash
+cd "$HOME"
+lesskey ~/.dot/lesskey
+yadm submodule update --recursive --init
+vim +PluginInstall +qall
