@@ -2,6 +2,10 @@
 cd "$HOME"
 lesskey ~/.dot/lesskey
 yadm submodule update --recursive --init
+
+mkdir -p .vim/spell
+touch .vim/spell/en.utf-8.add
+
 vim +PluginInstall +qall
 
 # Let's not install Oh My Zsh automatically, because that would involve
