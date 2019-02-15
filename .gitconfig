@@ -1,7 +1,3 @@
-[color]
-	branch = auto
-	diff = auto
-	status = auto
 [user]
 	name = Harry Cutts
 	email = eternal.linux@gmail.com
@@ -10,5 +6,5 @@
 	excludesfile = ~/.dot/gitignore
 [push]
 	default = simple
-[merge]
-	ff = only
+[include]
+	path = ~/.gitconfig.local

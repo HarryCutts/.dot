@@ -12,3 +12,5 @@ alias gdw="git diff --word-diff"
 alias o="gnome-open"
 
 alias sagi="sudo apt-get install"
+
+alias ssh-show-key-fingerprint="ssh-keygen -E md5 -lf /etc/ssh/ssh_host_rsa_key.pub"

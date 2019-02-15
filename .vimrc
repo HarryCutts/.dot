@@ -111,3 +111,12 @@ noremap <C-w>n <C-w>k
 
 " <C-W>n -> move to window to right
 noremap <C-w>s <C-w>l
+
+"* Google-specific configuration *"
+function! SourceIfExists(file)
+	if filereadable(expand(a:file))
+		exe 'source' a:file
+	endif
+endfunction
+
+call SourceIfExists("~/.google-dotfiles/vim.vim")

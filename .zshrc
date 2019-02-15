@@ -30,3 +30,6 @@ else
 	export RPROMPT="%F{yellow}%T%f"
 fi
 
+if [[ -r "$HOME/.google-dotfiles/zsh.zsh" ]]; then
+	source "$HOME/.google-dotfiles/zsh.zsh"
+fi
