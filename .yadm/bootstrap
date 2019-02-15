@@ -3,3 +3,7 @@ cd "$HOME"
 lesskey ~/.dot/lesskey
 yadm submodule update --recursive --init
 vim +PluginInstall +qall
+
+# Let's not install Oh My Zsh automatically, because that would involve
+# executing a shell script fresh out of curl. How about no.
+echo "Don't forget to install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh#getting-started)."
