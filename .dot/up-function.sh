@@ -20,16 +20,24 @@
 #	/home/user/foo/bar/baz
 #	$ mv quuz.txt $(up foo)
 #
-function up {
-	local pathParts
+up() {
+	local pathParts=()
 	local target="${1%%/*}"  # split $1 by the first slash
 	local tail="${1#*/}"
 	local targetPath=""
 
-	pathParts=("${(s|/|)$(pwd)}")  # split pwd by slash
+	# ಠ_ಠ
+	local readDashASwitch
+	if [[ $ZSH_NAME ]]; then
+		readDashASwitch='-A'
+	else
+		readDashASwitch='-a'
+	fi
+
+	IFS='/' read -r $readDashASwitch pathParts <<< $(pwd)
 
 	local part
-	for part in $pathParts; do
+	for part in ${pathParts[@]}; do
 		targetPath=$targetPath/$part
 		if [[ $part == $target ]]; then
 			break
