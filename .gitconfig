@@ -4,6 +4,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.dot/gitignore
+[pager]
+	branch = false
 [push]
 	default = simple
 [include]
