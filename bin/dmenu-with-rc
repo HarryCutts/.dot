@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Snippet from on Manjaro i3's dmenu_recency command to load .dmenurc with a
+# dmenu command.
+
+if ! [ -f "$HOME/.dmenurc" ] && [ -f /usr/share/dmenu/dmenurc ]; then
+	cp /usr/share/dmenu/dmenurc "$HOME/.dmenurc"
+fi
+if [ -f "$HOME/.dmenurc" ]; then
+	. "$HOME/.dmenurc"
+fi
+
+case $1 in
+	desktop)
+		i3-dmenu-desktop --dmenu="dmenu $DMENU_OPTIONS -i"
+		;;
+	executables)
+		if [ -x "$(command -v dmenu_recency)" ]; then
+			dmenu_recency  # Already loads .dmenurc itself
+		else
+			dmenu_run $DMENU_OPTIONS
+		fi
+		;;
+	*)
+		echo "Missing or invalid argument $1" >&2
+		echo "usage: dmenu-with-rc { desktop | executables }" >&2
+		exit 2
+		;;
+esac

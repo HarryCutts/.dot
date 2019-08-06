@@ -10,4 +10,11 @@ vim +PluginInstall +qall
 
 # Let's not install Oh My Zsh automatically, because that would involve
 # executing a shell script fresh out of curl. How about no.
-echo "Don't forget to install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh#getting-started)."
+cat << EOF
+Don't forget to:
+* install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh#getting-started),
+* set the class for this machine if applicable and compile the i3 config:
+	yadm config local.class manjaro
+	cd ~/.config/i3
+	./compile.sh > config
+EOF
