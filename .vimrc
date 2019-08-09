@@ -82,41 +82,12 @@ set wildmenu
 "* Key mappings *"
 let mapleader=" "
 
-"* Dvorak remappings *"
-" (nothing to change) h -> move left, H -> screen top
-
-" t -> move down (with wrapping), T -> join lines
-noremap t gj
-noremap T J
-
-" n -> move up (with wrapping), j/J -> jump between matches
-noremap n gk
-noremap j n
-noremap J N
-
-" s -> move right, S -> screen bottom
-noremap s l
-noremap S L
-
-" For window navigation
-" (To access overridden bindings, hold Ctrl for the second key stroke.)
-
-" (nothing to change) <C-W>h -> Move to left window
-
-" <C-W>t -> move to window below
-noremap <C-w>t <C-w>j
-
-" <C-W>n -> move to window above
-noremap <C-w>n <C-w>k
-
-" <C-W>n -> move to window to right
-noremap <C-w>s <C-w>l
-
-"* Google-specific configuration *"
+"* Other configuration files *"
 function! SourceIfExists(file)
 	if filereadable(expand(a:file))
 		exe 'source' a:file
 	endif
 endfunction
 
+source ~/.dot/dvorak.vim
 call SourceIfExists("~/.google-dotfiles/vim.vim")
