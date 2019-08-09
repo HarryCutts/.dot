@@ -9,6 +9,8 @@ alias gco="git checkout"
 alias gd="git diff"
 alias gdw="git diff --word-diff"
 
+alias nv="nvim"
+
 alias o="gnome-open"
 
 alias sagi="sudo apt-get install"
