@@ -13,3 +13,5 @@ bar {
         status_command i3status
         position bottom
 }
+
+exec nitrogen --restore
