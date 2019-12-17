@@ -178,7 +178,12 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
-# Thinkpad X200T buttons
+####################
+## Laptop support ##
+####################
+
 bindsym XF86ScreenSaver exec i3lock -c 000000
+bindsym XF86MonBrightnessDown exec --no-startup-id /usr/bin/xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id /usr/bin/xbacklight -inc 10
 
 focus_follows_mouse no
