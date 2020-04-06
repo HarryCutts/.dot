@@ -10,6 +10,10 @@ set cursorline
 set number
 set scrolloff=5
 
+set nowrap
+
+filetype plugin indent on
+
 " Enable true colour (on Neovim 0.1.5+)
 if (has("termguicolors"))
 	set termguicolors
