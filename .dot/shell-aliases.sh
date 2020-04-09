@@ -11,7 +11,7 @@ alias gdw="git diff --word-diff"
 
 alias nv="nvim"
 
-alias o="gnome-open"
+alias o="xdg-open"
 
 alias sagi="sudo apt-get install"
 
