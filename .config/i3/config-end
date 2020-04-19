@@ -1,0 +1,2 @@
+# This only seems to work on Manjaro when run after the rest of the config.
+exec sh ~/.xsessionrc
