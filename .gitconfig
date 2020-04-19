@@ -6,6 +6,8 @@
 	excludesfile = ~/.dot/gitignore
 [pager]
 	branch = false
+[pull]
+	ff = only
 [push]
 	default = simple
 [include]
