@@ -2,6 +2,8 @@ source ~/.dot/dvorak.vim
 
 set hidden
 
+set splitbelow splitright
+
 set completeopt=menu,preview,longest
 set wildmode=longest:full
 set wildmenu
