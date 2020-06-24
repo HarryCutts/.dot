@@ -1,4 +1,6 @@
 exec --no-startup-id redshift-gtk
 
+exec sh ~/.screenlayout.sh
+
 # This only seems to work on Manjaro when run after the rest of the config.
 exec sh ~/.xsessionrc
