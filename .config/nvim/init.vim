@@ -27,6 +27,7 @@ runtime chromiumos.vim
 if !empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
 	call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'dmix/elvish.vim', { 'on_ft': ['elvish'] }
 	Plug 'drewtempelmeyer/palenight.vim'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'vivien/vim-linux-coding-style'
