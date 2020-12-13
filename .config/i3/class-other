@@ -1,9 +1,15 @@
 # Volume buttons
-# amixer commands from https://faq.i3wm.org/question/125/how-to-change-the-systems-volume.1.html
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 # (Can't be included in Manjaro due to overriding the volumeicon bindings.)
+# pactl
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && killall -SIGUSR1 i3status
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && killall -SIGUSR1 i3status
+
+# amixer commands (from https://faq.i3wm.org/question/125/how-to-change-the-systems-volume.1.html)
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 
 bindsym $mod+l exec i3lock -c 000000
 
