@@ -42,6 +42,13 @@ edit:completion:arg-completer[up] = $anc:anc-completer
 anc~ = $anc:anc~
 up~ = $anc:up~
 
+#######################
+## Other completions ##
+#######################
+
+edit:completion:arg-completer[sudo] = $edit:complete-sudo~
+edit:completion:arg-completer[exec] = $edit:complete-sudo~
+
 #############
 ## Aliases ##
 #############
@@ -70,3 +77,9 @@ alias-with-comp gs git status
 alias-with-comp ls ls --color=auto
 alias-with-comp nv nvim
 alias-with-comp o xdg-open
+
+##########
+## Misc ##
+##########
+
+E:EDITOR = nvim
