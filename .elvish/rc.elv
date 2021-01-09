@@ -10,6 +10,8 @@ use github.com/zzamboni/elvish-completions/cd
 use github.com/zzamboni/elvish-completions/git
 use github.com/zzamboni/elvish-completions/ssh
 
+use dd-completion
+
 # Bang-Bang (Bash-style history with !!, !$, etc.)
 epm:install &silent-if-installed github.com/zzamboni/elvish-modules
 use github.com/zzamboni/elvish-modules/bang-bang
