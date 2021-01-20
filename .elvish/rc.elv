@@ -7,10 +7,9 @@ use epm
 epm:install &silent-if-installed github.com/zzamboni/elvish-completions
 use github.com/zzamboni/elvish-completions/builtins
 use github.com/zzamboni/elvish-completions/cd
+use github.com/zzamboni/elvish-completions/dd
 use github.com/zzamboni/elvish-completions/git
 use github.com/zzamboni/elvish-completions/ssh
-
-use dd-completion
 
 # Bang-Bang (Bash-style history with !!, !$, etc.)
 epm:install &silent-if-installed github.com/zzamboni/elvish-modules
