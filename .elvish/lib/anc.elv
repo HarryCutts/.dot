@@ -26,9 +26,9 @@ fn anc [arg]{
   if (== $anc-index 0) {
     fail "no ancestor named '"$dir"'"
   }
-  result = (str:join '/' $pwd-parts[0:(+ $anc-index 1)])
+  result = (str:join '/' $pwd-parts[0..(+ $anc-index 1)])
   if (> (count $arg-parts) 0) {
-    result = $result'/'(str:join '/' $arg-parts[1:(count $arg-parts)])
+    result = $result'/'(str:join '/' $arg-parts[1..(count $arg-parts)])
   }
   put $result
 }

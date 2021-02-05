@@ -54,12 +54,10 @@ edit:completion:arg-completer[exec] = $edit:complete-sudo~
 ## Aliases ##
 #############
 
--exports- = [&]
-
 # Creates an alias while keeping whatever completion exists for the target
 # command.
 fn alias-with-comp [name cmd @args]{
-  -exports-[$name'~'] = [@rest]{ (external $cmd) $@args $@rest }
+  edit:add-var $name'~' [@rest]{ (external $cmd) $@args $@rest }
   if (has-key $edit:completion:arg-completer $cmd) {
     edit:completion:arg-completer[$name] = [_ @rest]{
       $edit:completion:arg-completer[$cmd] $cmd $@args $@rest
