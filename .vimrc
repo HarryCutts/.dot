@@ -1,32 +1,6 @@
 let g:vimfolder = '~/.vim'
 
-"* Vundle *"
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin('~/.vim/bundle')
-Plugin 'gmarik/vundle'
-
-"- Plugins -"
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
-
-Plugin 'groenewege/vim-less'
-Plugin 'git://github.com/tomasr/molokai.git'
-Plugin 'scrooloose/syntastic'
-" Recommended settings from Syntastic README
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-call vundle#end()
 
 "* Miscellaneous *"
 set nobackup
@@ -60,7 +34,6 @@ filetype plugin indent on
 syntax enable
 
 set t_Co=256
-colorscheme molokai
 set background=dark
 
 " highlight trailing whitespace
