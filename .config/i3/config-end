@@ -6,7 +6,7 @@ exec sh ~/.screenlayout.sh
 # Nitrogen gets an X BadDrawable error if it starts before the screens are laid out, for some
 # reason. (https://github.com/l3ib/nitrogen/issues/105#issuecomment-798805657)
 # Oh, and picom causes all sorts of trouble if it doesn't get its sleep, for some reason.
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id sleep 0.5; nitrogen --restore; sleep 0.5; picom -b
 
 # This only seems to work on Manjaro when run after the rest of the config.
 exec sh ~/.xsessionrc
