@@ -87,5 +87,5 @@ E:EDITOR = nvim
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
 if (path:is-dir ~/dev/depot_tools) {
-  set-env PATH $E:PATH':'$E:HOME'/dev/depot_tools'
+  paths = [$@paths ~/dev/depot_tools]
 }
