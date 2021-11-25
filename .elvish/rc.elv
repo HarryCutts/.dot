@@ -12,6 +12,9 @@ use github.com/zzamboni/elvish-completions/evemu
 use github.com/zzamboni/elvish-completions/git
 use github.com/zzamboni/elvish-completions/ssh
 
+epm:install &silent-if-installed github.com/HarryCutts/elvish-chromium-dev
+use github.com/HarryCutts/elvish-chromium-dev/gclient
+
 # Bang-Bang (Bash-style history with !!, !$, etc.)
 epm:install &silent-if-installed github.com/zzamboni/elvish-modules
 use github.com/zzamboni/elvish-modules/bang-bang
