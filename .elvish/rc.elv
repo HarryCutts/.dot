@@ -22,7 +22,7 @@ use github.com/zzamboni/elvish-modules/bang-bang
 # Powerline theme (requires fonts, e.g. from fonts-powerline Debian package)
 epm:install &silent-if-installed github.com/muesli/elvish-libs
 use github.com/muesli/elvish-libs/theme/powerline
-powerline:prompt-segments = [
+set powerline:prompt-segments = [
   dir
   virtualenv
   git-branch
@@ -36,23 +36,23 @@ powerline:prompt-segments = [
   arrow
 ]
 if (not-eq $E:SSH_CLIENT '') {
-  powerline:prompt-segments = [host-short $@powerline:prompt-segments]
+  set powerline:prompt-segments = [host-short $@powerline:prompt-segments]
 }
-powerline:prompt-segments = [newline $@powerline:prompt-segments]
+set powerline:prompt-segments = [newline $@powerline:prompt-segments]
 
 # `up` and `anc`
 use anc
-edit:completion:arg-completer[anc] = $anc:anc-completer
-edit:completion:arg-completer[up] = $anc:anc-completer
-anc~ = $anc:anc~
-up~ = $anc:up~
+set edit:completion:arg-completer[anc] = $anc:anc-completer
+set edit:completion:arg-completer[up] = $anc:anc-completer
+var anc~ = $anc:anc~
+var up~ = $anc:up~
 
 #######################
 ## Other completions ##
 #######################
 
-edit:completion:arg-completer[sudo] = $edit:complete-sudo~
-edit:completion:arg-completer[exec] = $edit:complete-sudo~
+set edit:completion:arg-completer[sudo] = $edit:complete-sudo~
+set edit:completion:arg-completer[exec] = $edit:complete-sudo~
 
 #############
 ## Aliases ##
@@ -63,7 +63,7 @@ edit:completion:arg-completer[exec] = $edit:complete-sudo~
 fn alias-with-comp [name cmd @args]{
   edit:add-var $name'~' [@rest]{ (external $cmd) $@args $@rest }
   if (has-key $edit:completion:arg-completer $cmd) {
-    edit:completion:arg-completer[$name] = [_ @rest]{
+    set edit:completion:arg-completer[$name] = [_ @rest]{
       $edit:completion:arg-completer[$cmd] $cmd $@args $@rest
     }
   }
@@ -85,10 +85,10 @@ alias-with-comp o xdg-open
 ## Misc ##
 ##########
 
-E:EDITOR = nvim
+set E:EDITOR = nvim
 
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
 if (path:is-dir ~/dev/depot_tools) {
-  paths = [$@paths ~/dev/depot_tools]
+  set paths = [$@paths ~/dev/depot_tools]
 }
