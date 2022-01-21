@@ -14,7 +14,7 @@
 #
 # (anc does not check that such a subdirectory exists, however.)
 #
-fn anc [arg]{
+fn anc {|arg|
   use str
   var pwd-parts = [(str:split '/' $pwd)]
   var arg-parts = [(str:split '/' $arg)]
@@ -34,11 +34,11 @@ fn anc [arg]{
 }
 
 # Like anc, but changes to the returned directory.
-fn up [@a]{
+fn up {|@a|
   cd (anc $@a)
 }
 
-var anc-completer = [@cmd]{
+var anc-completer = {|@cmd|
   use str
   if (> (count $cmd) 2) { return }
   var arg = $cmd[1]
@@ -52,7 +52,7 @@ var anc-completer = [@cmd]{
   var arg-base = [(str:split '/' $arg)][0]
   var prefix = [(str:split $arg-base $pwd)][0]
   echo "prefix is "$prefix
-  var filter-and-trim = [x]{
+  var filter-and-trim = {|x|
     # Directories have completions ending with /
     if (eq $x[stem][-1] '/') {
       put (str:trim-prefix $x[stem] $prefix)
