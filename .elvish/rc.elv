@@ -19,7 +19,11 @@ use github.com/HarryCutts/elvish-chromium-dev/gclient
 epm:install &silent-if-installed github.com/zzamboni/elvish-modules
 use github.com/zzamboni/elvish-modules/bang-bang
 
-# Powerline theme (requires fonts, e.g. from fonts-powerline Debian package)
+# Powerline theme. Requires fonts:
+# * on Debian, install the fonts-powerline package
+# * for the ChromeOS Secure Shell extension, add the relevant font entries to
+#   the "Text font family" option (e.g. `"Cousine", "Powerline For Cousine"`;
+#   https://chromium.googlesource.com/apps/libapps/+/HEAD/nassh/doc/fonts.md)
 epm:install &silent-if-installed github.com/muesli/elvish-libs
 use github.com/muesli/elvish-libs/theme/powerline
 set powerline:prompt-segments = [
