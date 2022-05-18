@@ -2,7 +2,7 @@
 	name = Harry Cutts
 	email = eternal.linux@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.dot/gitignore
 [pager]
 	branch = false
