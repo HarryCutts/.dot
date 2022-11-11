@@ -30,6 +30,7 @@ if !empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
 	Plug 'dmix/elvish.vim', { 'on_ft': ['elvish'] }
 	Plug 'drewtempelmeyer/palenight.vim'
 	Plug 'editorconfig/editorconfig-vim'
+	Plug 'overcache/NeoSolarized'
 	Plug 'vivien/vim-linux-coding-style'
 	call plug#end()
 
@@ -42,9 +43,9 @@ if !empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
 	nnoremap <silent> <c-s> :TmuxNavigateRight<cr>
 	nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
-	" drewtempelmeyer/palenight.vim
-	set background=dark
-	colorscheme palenight
+	" overcache/NeoSolarized
+	set background=light
+	colorscheme NeoSolarized
 
 	" vivien/vim-linux-coding-style: Disable by default.
 	let g:linuxsty_patterns = []
