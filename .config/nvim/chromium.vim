@@ -1,4 +1,4 @@
-let s:chromiumroot=$HOME . '/dev/chromium'
+let s:chromiumroot=$HOME . '/chromium'
 
 function s:UseChromiumStyle()
 	setlocal shiftwidth=2
@@ -16,5 +16,5 @@ if isdirectory(s:chromiumroot)
 	" Assorted other filetypes
 	exe 'source' (s:chromiumroot . '/src/tools/vim/filetypes.vim')
 
-	autocmd BufRead,BufNewFile */dev/chromium/* call s:UseChromiumStyle()
+	autocmd BufRead,BufNewFile */chromium/* call s:UseChromiumStyle()
 endif

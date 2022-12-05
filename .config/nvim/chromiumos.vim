@@ -1,4 +1,4 @@
-let s:crosroot=$HOME . '/dev/chromiumos'
+let s:crosroot=$HOME . '/chromiumos'
 
 function s:UseKernelStyle()
 	setlocal colorcolumn=80
