@@ -19,6 +19,12 @@ use github.com/HarryCutts/elvish-chromium-dev/gclient
 epm:install &silent-if-installed github.com/zzamboni/elvish-modules
 use github.com/zzamboni/elvish-modules/bang-bang
 
+# Long-running notifications
+use github.com/zzamboni/elvish-modules/long-running-notifications
+set long-running-notifications:never-notify = [
+  $@long-running-notifications:never-notify man
+]
+
 # Powerline theme. Requires fonts:
 # * on Debian, install the fonts-powerline package
 # * for the ChromeOS Secure Shell extension, add the relevant font entries to
@@ -84,6 +90,11 @@ alias-with-comp gs git status
 alias-with-comp ls ls --color=auto
 alias-with-comp nv nvim
 alias-with-comp o xdg-open
+
+# Don't show long-running notifications for aliases to interactive commands
+set long-running-notifications:never-notify = [
+  $@long-running-notifications:never-notify nv gca gd gdw
+]
 
 ##########
 ## Misc ##
