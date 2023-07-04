@@ -25,6 +25,18 @@ set long-running-notifications:never-notify = [
   $@long-running-notifications:never-notify man
 ]
 
+if (not-eq $E:SSH_CLIENT '') {
+  use gchat-webhook
+  if $gchat-webhook:configured {
+    set long-running-notifications:notifier = {|cmd duration start|
+      gchat-webhook:send "Finished: `"$cmd"`\nRunning time: "$duration"s"
+    }
+  } else {
+    echo (styled "Note:" bold) "Google Chat webhook not configured. See instructions in the gchat-webhook module to set up notifications."
+    echo
+  }
+}
+
 # Powerline theme. Requires fonts:
 # * on Debian, install the fonts-powerline package
 # * for the ChromeOS Secure Shell extension, add the relevant font entries to
