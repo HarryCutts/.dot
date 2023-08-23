@@ -1,0 +1,5 @@
+source ~/.dot/dvorak.vim
+
+set incsearch
+
+set scrolloff=5
