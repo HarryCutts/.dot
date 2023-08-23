@@ -26,5 +26,5 @@ noremap <C-w>t <C-w>j
 " <C-W>n -> move to window above
 noremap <C-w>n <C-w>k
 
-" <C-W>n -> move to window to right
+" <C-W>s -> move to window to right
 noremap <C-w>s <C-w>l
