@@ -116,6 +116,13 @@ set E:EDITOR = nvim
 
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
-if (path:is-dir ~/dev/depot_tools) {
-  set paths = [$@paths ~/dev/depot_tools]
+if (path:is-dir ~/depot_tools) {
+  set paths = [$@paths ~/depot_tools]
+}
+
+# Set umask (https://chromium.googlesource.com/chromiumos/docs/+/main/developer_guide.md#verify-that-your-default-file-permissions-umask_setting-is-correct)
+use platform
+if $platform:is-unix {
+  use unix
+  set unix:umask = 0o022
 }
