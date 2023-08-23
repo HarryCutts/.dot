@@ -22,7 +22,7 @@ use github.com/zzamboni/elvish-modules/bang-bang
 # Long-running notifications
 use github.com/zzamboni/elvish-modules/long-running-notifications
 set long-running-notifications:never-notify = [
-  $@long-running-notifications:never-notify man
+  $@long-running-notifications:never-notify gcert man ssh tmux
 ]
 
 if (not-eq $E:SSH_CLIENT '') {
@@ -105,7 +105,7 @@ alias-with-comp o xdg-open
 
 # Don't show long-running notifications for aliases to interactive commands
 set long-running-notifications:never-notify = [
-  $@long-running-notifications:never-notify nv gca gd gdw
+  $@long-running-notifications:never-notify gc gca gd gdw nv
 ]
 
 ##########
