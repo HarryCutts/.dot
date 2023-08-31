@@ -1,3 +1,5 @@
+use math
+
 ##############
 ## Packages ##
 ##############
@@ -28,8 +30,22 @@ set long-running-notifications:never-notify = [
 if (not-eq $E:SSH_CLIENT '') {
   use gchat-webhook
   if $gchat-webhook:configured {
+    fn -duration-to-string {|duration|
+      var out = ""
+      var seconds-left = $duration
+      if (> $seconds-left 3600) {
+        set out = $out(math:floor (/ $seconds-left 3600))"h "
+        set seconds-left = (% $seconds-left 3600)
+      }
+      if (> $seconds-left 60) {
+        set out = $out(math:floor (/ $seconds-left 60))"m "
+        set seconds-left = (% $seconds-left 60)
+      }
+      put $out$seconds-left"s"
+    }
+
     set long-running-notifications:notifier = {|cmd duration start|
-      gchat-webhook:send "Finished: `"$cmd"`\nRunning time: "$duration"s"
+      gchat-webhook:send "`"$cmd"` finished in "(-duration-to-string $duration)
     }
   } else {
     echo (styled "Note:" bold) "Google Chat webhook not configured. See instructions in the gchat-webhook module to set up notifications."
