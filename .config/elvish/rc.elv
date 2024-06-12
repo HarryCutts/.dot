@@ -24,7 +24,12 @@ use github.com/zzamboni/elvish-modules/bang-bang
 # Long-running notifications
 use github.com/zzamboni/elvish-modules/long-running-notifications
 set long-running-notifications:never-notify = [
-  $@long-running-notifications:never-notify gcert man ssh tmux
+  $@long-running-notifications:never-notify
+  gcert
+  man
+  ssh
+  sudoedit
+  tmux
 ]
 
 if (not-eq $E:SSH_CLIENT '') {
