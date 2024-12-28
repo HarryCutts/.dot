@@ -5,11 +5,17 @@
 # Debian package dependencies:
 #   brightnessctl
 #   gnome-terminal
+#   grim
 #   i3-wm (for i3-dmenu-desktop command)
+#   playerctl
+#   pulseaudio-utils (for pactl)
+#   slurp
+#   suckless-tools (for dmenu_path)
 #   sway
 #   swayidle
 #   swaylock
 #   waybar
+#   wdisplays
 #   wmenu
 
 ### Variables
@@ -23,11 +29,6 @@ set $up n
 set $right s
 # Your preferred terminal emulator
 set $term gnome-terminal
-# Your preferred application launcher
-# TODO: get the launcher to list .desktop files rather than commands, or find another launcher.
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
@@ -85,8 +86,11 @@ focus_follows_mouse no
 
     # Start your launcher
     # TODO: i3-dmenu-desktop, as the name suggests, is from the i3 package. Maybe find a replacement
-    # that doesn't require installing the whole of i3.
+    # that doesn't require installing the whole of i3, and that can pass the command to swaymsg like
+    # below.
     bindsym $mod+space exec i3-dmenu-desktop --dmenu="wmenu -i"
+    # Note: pass the final command to swaymsg so that the resulting window can be opened
+    # on the original workspace that the command was run on.
     bindsym $mod+shift+space exec dmenu_path | wmenu | xargs swaymsg exec --
 
 
@@ -228,9 +232,23 @@ bindsym $mod+r mode "resize"
 #
 # Laptop control keys:
 #
-# TODO: as many of the others as possible; at least the volume keys and Print Screen
-    bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-    bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+# Source for some: https://wiki.archlinux.org/title/Sway#Custom_keybindings
+# Can find key names using wev
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86Display exec wdisplays
+
+#
+# Miscellaneous:
+#
+    bindsym Print exec 'grim -g "$(slurp)"'
 
 #
 # Touchpad gestures:
@@ -260,9 +278,16 @@ include /etc/sway/config.d/*
 
 ### Per-window rules
 
-# Hide window borders for Chrome apps, which already have their own.
-for_window [app_id="^chrome-.*"] border none
+# Hide title bar for Chrome apps, which already have their own.
+for_window [app_id="^chrome-.*"] border pixel 2
+
+# Various Gnome-style apps with their own title bar
+for_window [app_id="eog"] border pixel 2
+for_window [app_id="wdisplays"] border pixel 2
 
 ### Other stuff
+
+hide_edge_borders both
+smart_borders on
 
 exec "ssh-agent -a $SSH_AUTH_SOCK"
