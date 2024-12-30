@@ -6,17 +6,15 @@
 #   brightnessctl
 #   gnome-terminal
 #   grim
-#   i3-wm (for i3-dmenu-desktop command)
 #   playerctl
 #   pulseaudio-utils (for pactl)
 #   slurp
-#   suckless-tools (for dmenu_path)
 #   sway
 #   swayidle
 #   swaylock
 #   waybar
 #   wdisplays
-#   wmenu
+#   wofi
 
 ### Variables
 #
@@ -85,13 +83,10 @@ focus_follows_mouse no
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    # TODO: i3-dmenu-desktop, as the name suggests, is from the i3 package. Maybe find a replacement
-    # that doesn't require installing the whole of i3, and that can pass the command to swaymsg like
-    # below.
-    bindsym $mod+space exec i3-dmenu-desktop --dmenu="wmenu -i"
-    # Note: pass the final command to swaymsg so that the resulting window can be opened
-    # on the original workspace that the command was run on.
-    bindsym $mod+shift+space exec dmenu_path | wmenu | xargs swaymsg exec --
+    bindsym $mod+space exec wofi --show drun --allow-images --sort-order=alphabetical
+    # It would be nice to pass the final command to swaymsg here, so that the resulting window opens
+    # on the original workspace that the command was run on, but Wofi doesn't support this.
+    bindsym $mod+shift+space exec wofi --show run --sort-order=alphabetical
 
 
     # Drag floating windows by holding down $mod and left mouse button.
