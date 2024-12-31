@@ -4,6 +4,8 @@
 #
 # Debian package dependencies:
 #   brightnessctl
+#   dex
+#   dunst (to show notifications)
 #   gnome-terminal
 #   grim
 #   playerctl
@@ -94,10 +96,10 @@ focus_follows_mouse no
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+space exec wofi --show drun --allow-images --sort-order=alphabetical
+    bindsym $mod+space exec wofi --show drun --allow-images --sort-order=alphabetical --insensitive
     # It would be nice to pass the final command to swaymsg here, so that the resulting window opens
     # on the original workspace that the command was run on, but Wofi doesn't support this.
-    bindsym $mod+shift+space exec wofi --show run --sort-order=alphabetical
+    bindsym $mod+shift+space exec wofi --show run --sort-order=alphabetical --insensitive
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -289,6 +291,7 @@ for_window [app_id="^chrome-.*"] border pixel 2
 
 # Various Gnome-style apps with their own title bar
 for_window [app_id="eog"] border pixel 2
+for_window [app_id="org.gnome.Nautilus"] border pixel 2
 for_window [app_id="wdisplays"] border pixel 2
 
 ### Other stuff
@@ -297,3 +300,4 @@ hide_edge_borders both
 smart_borders on
 
 exec "ssh-agent -a $SSH_AUTH_SOCK"
+exec dex -ae sway
