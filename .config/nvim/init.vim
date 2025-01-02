@@ -31,6 +31,7 @@ if !empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
 	Plug 'drewtempelmeyer/palenight.vim'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'overcache/NeoSolarized'
+	Plug 'udalov/kotlin-vim'
 	Plug 'vivien/vim-linux-coding-style'
 	call plug#end()
 
