@@ -27,9 +27,12 @@ set long-running-notifications:never-notify = [
   $@long-running-notifications:never-notify
   gcert
   man
+  pydoc
+  pydoc3
   ssh
   sudoedit
   tmux
+  tmx2
 ]
 
 if (not-eq $E:SSH_CLIENT '') {
