@@ -155,3 +155,8 @@ if $platform:is-unix {
   use unix
   set unix:umask = 0o022
 }
+
+# Add Flutter to path if installed in the usual location
+if (path:is-dir /usr/bin/flutter/bin) {
+  set paths = [$@paths /usr/bin/flutter/bin]
+}
