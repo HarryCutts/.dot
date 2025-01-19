@@ -138,6 +138,11 @@ set long-running-notifications:never-notify = [
 
 set E:EDITOR = nvim
 
+# Use a "small words" (e.g. part of a file path) rather than "big words" (chunks of non-whitespace) for some editor key bindings
+set edit:insert:binding[Ctrl-Left] = $edit:move-dot-left-small-word~
+set edit:insert:binding[Ctrl-Right] = $edit:move-dot-right-small-word~
+set edit:insert:binding[Ctrl-W] = $edit:kill-small-word-left~
+
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
 if (path:is-dir ~/depot_tools) {
