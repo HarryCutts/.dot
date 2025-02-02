@@ -100,6 +100,10 @@ var up~ = $anc:up~
 set edit:completion:arg-completer[sudo] = $edit:complete-sudo~
 set edit:completion:arg-completer[exec] = $edit:complete-sudo~
 
+epm:install &silent-if-installed github.com/HarryCutts/elvish-complete-from-bash
+use github.com/HarryCutts/elvish-complete-from-bash/complete-from-bash
+complete-from-bash:autoimport
+
 #############
 ## Aliases ##
 #############
