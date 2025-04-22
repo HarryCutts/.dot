@@ -32,6 +32,8 @@ set $term gnome-terminal
 
 include /etc/sway/config-vars.d/*
 
+include /etc/sway/config.d/*
+
 ### Output configuration
 #
 # Wallpaper
@@ -282,8 +284,6 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-include /etc/sway/config.d/*
 
 ### Per-window rules
 
