@@ -146,6 +146,7 @@ set E:EDITOR = nvim
 set edit:insert:binding[Ctrl-Left] = $edit:move-dot-left-small-word~
 set edit:insert:binding[Ctrl-Right] = $edit:move-dot-right-small-word~
 set edit:insert:binding[Ctrl-W] = $edit:kill-small-word-left~
+set edit:insert:binding[Ctrl-Alt-W] = $edit:kill-word-left~  # It would be nice to use Ctrl-Shift-W for this, but Shift is only supported for F keys
 
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
