@@ -148,6 +148,11 @@ set edit:insert:binding[Ctrl-Right] = $edit:move-dot-right-small-word~
 set edit:insert:binding[Ctrl-W] = $edit:kill-small-word-left~
 set edit:insert:binding[Ctrl-Alt-W] = $edit:kill-word-left~  # It would be nice to use Ctrl-Shift-W for this, but Shift is only supported for F keys
 
+use android-platform ap
+set long-running-notifications:never-notify = [
+  $@long-running-notifications:never-notify ap:lunch ap:tapas ap:banchan
+]
+
 # Add Chromium depot tools to the path, if installed in the usual location.
 use path
 if (path:is-dir ~/depot_tools) {
