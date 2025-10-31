@@ -15,6 +15,7 @@ Don't forget to:
 * install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh#getting-started),
 * install vim-plug (https://github.com/junegunn/vim-plug#neovim),
 * install Powerline fonts (fonts-powerline package on Debian),
+* install Wayland clipboard CLI for NeoVim clipboard integration (wl-clipboard package on Debian),
 * set the class for this machine if applicable and compile the i3 config:
 	yadm config local.class manjaro
 	cd ~/.config/i3
